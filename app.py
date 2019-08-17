@@ -42,7 +42,7 @@ def result():
     itu = (event['data']['temperatura'] - 0.55)*( 1 - event['data']['umidade_ar'] )*( event['data']['temperatura'] - 14 )
     # Implemente sua lógica aqui e insira as respostas na variável 'resposta'
     resposta = {
-        "iotData": event,
+        "iotData": json.dumps(event),
         "itu": itu,
         "volumeAgua": event['data']['umidade_solo'],
         "fahrenheit": 9.0/5.0 * event['data']['temperatura'] + 32
