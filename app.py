@@ -44,9 +44,9 @@ def result():
     resposta = {
         "iotData": {
             "timestamp": event['data']['timestamp'],
-              "temperatura": event['data']['temperatura'],
-              "umidade_ar": event['data']['umidade_ar'], 
-              "umidade_solo": event['data']['umidade_solo']
+            "temperatura": event['data']['temperatura'],
+            "umidade_ar": event['data']['umidade_ar'], 
+            "umidade_solo": event['data']['umidade_solo']
         },
         "itu": itu,
         "volumeAgua": event['data']['umidade_solo'],
