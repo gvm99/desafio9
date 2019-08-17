@@ -49,7 +49,7 @@ def result():
             "umidade_solo": event['data']['umidade_solo']
         },
         "itu": itu,
-        "volumeAgua": 1/event['data']['umidade_solo'],
+        "volumeAgua": event['data']['umidade_solo']/((4*3.14)/3),
         "fahrenheit": (9.0/5.0 * event['data']['temperatura'] + 32)
     }
     response = app.response_class(
