@@ -49,8 +49,8 @@ def result():
             "umidade_solo": event['data']['umidade_solo']
         },
         "itu": itu,
-        "volumeAgua": event['data']['umidade_solo'],
-        "fahrenheit": 9.0/5.0 * event['data']['temperatura'] + 32
+        "volumeAgua": 1/event['data']['umidade_solo'],
+        "fahrenheit": (9.0/5.0 * event['data']['temperatura'] + 32)
     }
     response = app.response_class(
         response=json.dumps(resposta),
