@@ -39,7 +39,7 @@ def result():
     event = json.loads((base64.b64decode(lastEvent.payload).decode('utf-8')))
     print(event)
     #ITU = T - 0.55 ( 1 - UR )( T - 14 )
-    itu = (event['data']['temperatura'] - 0.55)*( 1 - event['data']['umidade_ar'] )*( event['data']['temperatura'] - 14 )
+    itu = event['data']['temperatura'] - 0.55 * ( 1 - event['data']['umidade_ar']) * ( event['data']['temperatura'] - 14 )
     # Implemente sua lógica aqui e insira as respostas na variável 'resposta'
     resposta = {
         "iotData": {
